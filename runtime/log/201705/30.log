@@ -1,0 +1,106 @@
+[ 2017-05-30T16:28:06+08:00 ] ::1 ::1 GET /cms/admin.php/flink/index.html
+[ log ] localhost/cms/admin.php/flink/index.html [运行时间：0.121680s][吞吐率：8.22req/s] [内存消耗：1,384.73kb] [文件加载：36]
+[ info ] [ LANG ] /Users/mac/Documents/mamp/cms/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'flink',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/cms/admin.php/flink/status.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6,ja;q=0.4',
+  'cookie' => 'PHPSESSID=214773bd9de26e6ff350a469f60cc227',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-30T16:28:06+08:00 ] ::1 ::1 GET /cms/admin.php/login/index.html
+[ log ] localhost/cms/admin.php/login/index.html [运行时间：0.034914s][吞吐率：28.64req/s] [内存消耗：1,297.02kb] [文件加载：34]
+[ info ] [ LANG ] /Users/mac/Documents/mamp/cms/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'referer' => 'http://localhost/cms/admin.php/flink/status.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6,ja;q=0.4',
+  'cookie' => 'PHPSESSID=214773bd9de26e6ff350a469f60cc227',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /Users/mac/Documents/mamp/cms/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Users/mac/Documents/mamp/cms/application/admin/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-30T16:28:06+08:00 ] ::1 ::1 GET /cms/api.php/code/index.html
+[ log ] localhost/cms/api.php/code/index.html [运行时间：0.074437s][吞吐率：13.43req/s] [内存消耗：1,283.48kb] [文件加载：32]
+[ info ] [ LANG ] /Users/mac/Documents/mamp/cms/thinkphp/lang/zh-cn.php
+[ info ] [ BIND ] 'api'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'code',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/cms/admin.php/login/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch, br',
+  'accept-language' => 'zh-CN,zh;q=0.8,en;q=0.6,ja;q=0.4',
+  'cookie' => 'PHPSESSID=214773bd9de26e6ff350a469f60cc227',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Code->index[ /Users/mac/Documents/mamp/cms/application/api/controller/Code.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

@@ -1,0 +1,21 @@
+
+{include file="header" /}
+<div id="templatemo_main">
+    	<div id="templatemo_content">
+        
+            <div class="post_box">
+                <h2>{$article.title} </h2>
+                
+                <div class="post_meta"><strong>日期:</strong> {$article.inputtime|date="Y-m-d",###} | <strong>浏览:</strong> <script src="__ROOT__/api.php/count/index/id/{$article.id}"></script></div>
+                {$article.content}
+		  </div>
+                  
+        </div>
+        
+        
+        {include file="right" /}
+    	<div class="cleaner"></div>
+    </div> 
+
+</div> 
+{include file="footer" /}

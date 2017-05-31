@@ -1,0 +1,413 @@
+﻿{include file="header" /}
+<div class="main1">
+	<div class="left-1 fl">
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul>
+                	{plist name='vo' posid='1' num='5'}
+                    <li></li>
+                   {/plist}
+                    
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                	{plist name='vo' posid='1' num='5'}
+                    <li><p><a href="{$vo.url}">{$vo.title}</a></p><a href="{$vo.url}"><img src="{$vo.thumb}" /></a></li>
+                    {/plist}
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">jQuery(".slideBox").slide( { mainCell:".bd ul",effect:"left",autoPlay:true} );</script>
+        <div class="g-box1">
+        	<div class="t-1">特别推荐</div>
+            <ul class="b-box1">
+            	{plist name='vo' posid='1' num='7'}
+				<li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/plist}
+            </ul>
+        </div>
+	</div>
+    <div class="g-box2 fl">
+    	{plist name='vo' posid='1' num='0,1'}
+    	<h1><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></h1>
+        {/plist}
+        <ul class="b-box1">
+        	{plist name='vo' posid='1' num='1,5'}
+        	<li><span><a href="{:get_caturl($vo['catid'])}">{:get_catname($vo['catid'])}</a></span> | <a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            {/plist}
+        </ul>
+        {plist name='vo' posid='1' num='6,1'}
+    	<h1><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></h1>
+        {/plist}
+        <ul class="b-box1">
+        	{plist name='vo' posid='1' num='7,5'}
+        	<li><span><a href="{:get_caturl($vo['catid'])}">{:get_catname($vo['catid'])}</a></span> | <a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            {/plist}
+        </ul>
+        {plist name='vo' posid='1' num='8,1'}
+    	<h1><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></h1>
+        {/plist}
+        <ul class="b-box1">
+        	{plist name='vo' posid='1' num='9,5'}
+        	<li><span><a href="{:get_caturl($vo['catid'])}">{:get_catname($vo['catid'])}</a></span> | <a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            {/plist}
+        </ul>
+    </div>
+    <div class="right-1 fr">
+    	<div class="g-box3">
+        	<div class="t-1">大家都在看</div>
+            <ul class="b-box2">
+            	{rlist name='vo'  num='10'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/rlist}
+            </ul>
+        </div>
+        <div class="ad-250"><img src="__PUBLIC__/style2017/default/images/ad2.jpg" width="250" height="250" alt="广告位" /></div>
+    </div>
+	<div class="cl"></div>
+</div>
+<div class="ad-960"><img src="__PUBLIC__/style2017/default/images/ad1.jpg" width="960" alt="广告位" /></div>
+<div class="main1">
+	<div class="t-3">
+    	<span> 
+        	{clist name='vo' num='5'} / <a href='{$vo.url}'>{$vo.catname}</a></li>{/clist}
+        </span>
+        <h3><a href="#">社会新闻</a></h3>
+    </div>
+    <div class="left-2 fl">
+    	<div class="b-box3">
+        	{alist name='vo' num='1'}
+            <p><a href="{$vo.url]">{$vo.title}</a></p><a href="{$vo.url}]"><img src="{$vo.thumb}" /></a>
+            {/alist}
+		</div>
+        <div class="g-box4">
+        	<div class="t-2"><a href="#">湖南</a></div>
+            <div class="pic">
+            	{alist name='vo' num='1'}
+            	<a href="{$vo.url}"><img src="{$vo.thumb}" /></a>
+                <p><a href="{$vo.url}">{$vo.title}</a></p>
+               {:str_cut($vo.description,40,'')}...<a href="{$vo.url}">[详细]</a>
+               {/alist}
+            </div>
+            <ul class="b-box5">
+            	{alist name='vo' num='3'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+        <div class="g-box4">
+        	<div class="t-2"><a href="#">湖北</a></div>
+            <ul class="b-box1">
+                {alist name='vo' num='5'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+    </div>
+    <div class="middle-1 fl">
+    	{alist name='vo' num='1'}
+    	<h2><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></h2>
+        <p>{:str_cut($vo['description'],100,'...')}<a href="{$vo.url}">[查看全文]</a></p>
+        {/alist}
+        <ul class="b-box4">
+        	{alist name='vo' num='3'}
+        	<li><a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a></li>
+            {/alist}
+            <div class="cl"></div>
+        </ul>
+        <div class="g-box5">
+        	<div class="t-4 fl">
+            	<span><a href="#">&raquo;更多</a></span>
+            	<h3><a href="#">福建</a></h3>
+            </div>
+        	<div class="pic fl">
+            	{alist name='vo' num='1'}
+                <a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a>
+                {/alist}
+            </div>
+            <ul class="b-box5-1 fl">
+            	{alist name='vo' num='4'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/alist}
+            </ul>
+            <div class="cl"></div>
+        </div>
+        <div class="g-box5">
+        	<div class="t-4 fl">
+            	<span><a href="#">&raquo;更多</a></span>
+            	<h3><a href="#">海南</a></h3>
+            </div>
+        	<div class="pic fl">
+            	{alist name='vo' num='1'}
+                <a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a>
+                {/alist}
+            </div>
+            <ul class="b-box5-1 fl">
+            	{alist name='vo' num='4'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/alist}
+            </ul>
+            <div class="cl"></div>
+        </div>
+    </div>
+    <div class="right-2 fr">
+    	<div class="g-box6">
+        	<div class="t-2">热门文章</div>
+            <ul class="b-box2">
+            	{rlist name='vo' num='10'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/rlist}
+            </ul>
+        </div>
+        <div class="g-box6">
+        	<div class="t-2"><a href="#">河北</a></div>
+            <ul class="b-box6">
+            	{alist name='vo' num='2'}
+                <li><p><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></p><a href="{$vo.url}"><img src="{$vo.thumb}" /></a></li>
+                {/alist}
+                <div class="cl"></div>
+            </ul>
+            <ul class="b-box7">
+            	{alist name='vo' num='5'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+    </div>
+    <div class="cl"></div>
+</div>
+<div class="ad-960"><img src="__PUBLIC__/style2017/default/images/ad1.jpg" width="960" alt="广告位" /></div>
+<div class="main1">
+	<div class="t-3">
+    	<span> 
+        	{clist name='vo' num='5'} / <a href='{$vo.url}'>{$vo.catname}</a></li>{/clist}
+        </span>
+        <h3><a href="#">娱乐新闻</a></h3>
+    </div>
+    <div class="left-2 fl">
+    	<div class="b-box3">
+        	{alist name='vo' num='1'}
+            <p><a href="{$vo.url]">{$vo.title}</a></p><a href="{$vo.url}]"><img src="{$vo.thumb}" /></a>
+            {/alist}
+		</div>
+        <div class="g-box4">
+        	<div class="t-2"><a href="#">湖南</a></div>
+            <div class="pic">
+            	{alist name='vo' num='1'}
+            	<a href="{$vo.url}"><img src="{$vo.thumb}" /></a>
+                <p><a href="{$vo.url}">{$vo.title}</a></p>
+               {:str_cut($vo.description,40,'')}...<a href="{$vo.url}">[详细]</a>
+               {/alist}
+            </div>
+            <ul class="b-box5">
+            	{alist name='vo' num='3'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+        <div class="g-box4">
+        	<div class="t-2"><a href="#">湖北</a></div>
+            <ul class="b-box1">
+                {alist name='vo' num='5'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+    </div>
+    <div class="middle-1 fl">
+    	{alist name='vo' num='1'}
+    	<h2><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></h2>
+        <p>{:str_cut($vo['description'],100,'...')}<a href="{$vo.url}">[查看全文]</a></p>
+        {/alist}
+        <ul class="b-box4">
+        	{alist name='vo' num='3'}
+        	<li><a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a></li>
+            {/alist}
+            <div class="cl"></div>
+        </ul>
+        <div class="g-box5">
+        	<div class="t-4 fl">
+            	<span><a href="#">&raquo;更多</a></span>
+            	<h3><a href="#">福建</a></h3>
+            </div>
+        	<div class="pic fl">
+            	{alist name='vo' num='1'}
+                <a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a>
+                {/alist}
+            </div>
+            <ul class="b-box5-1 fl">
+            	{alist name='vo' num='4'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/alist}
+            </ul>
+            <div class="cl"></div>
+        </div>
+        <div class="g-box5">
+        	<div class="t-4 fl">
+            	<span><a href="#">&raquo;更多</a></span>
+            	<h3><a href="#">海南</a></h3>
+            </div>
+        	<div class="pic fl">
+            	{alist name='vo' num='1'}
+                <a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a>
+                {/alist}
+            </div>
+            <ul class="b-box5-1 fl">
+            	{alist name='vo' num='4'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/alist}
+            </ul>
+            <div class="cl"></div>
+        </div>
+    </div>
+    <div class="right-2 fr">
+    	<div class="g-box6">
+        	<div class="t-2">热门文章</div>
+            <ul class="b-box2">
+            	{rlist name='vo' num='10'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/rlist}
+            </ul>
+        </div>
+        <div class="g-box6">
+        	<div class="t-2"><a href="#">河北</a></div>
+            <ul class="b-box6">
+            	{alist name='vo' num='2'}
+                <li><p><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></p><a href="{$vo.url}"><img src="{$vo.thumb}" /></a></li>
+                {/alist}
+                <div class="cl"></div>
+            </ul>
+            <ul class="b-box7">
+            	{alist name='vo' num='5'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+    </div>
+    <div class="cl"></div>
+</div>
+<div class="ad-960"><img src="__PUBLIC__/style2017/default/images/ad1.jpg" width="960" alt="广告位" /></div>
+<div class="main1">
+	<div class="t-3">
+    	<span> 
+        	{clist name='vo' num='5'} / <a href='{$vo.url}'>{$vo.catname}</a></li>{/clist}
+        </span>
+        <h3><a href="#">体育新闻</a></h3>
+    </div>
+    <div class="left-2 fl">
+    	<div class="b-box3">
+        	{alist name='vo' num='1'}
+            <p><a href="{$vo.url]">{$vo.title}</a></p><a href="{$vo.url}]"><img src="{$vo.thumb}" /></a>
+            {/alist}
+		</div>
+        <div class="g-box4">
+        	<div class="t-2"><a href="#">湖南</a></div>
+            <div class="pic">
+            	{alist name='vo' num='1'}
+            	<a href="{$vo.url}"><img src="{$vo.thumb}" /></a>
+                <p><a href="{$vo.url}">{$vo.title}</a></p>
+               {:str_cut($vo.description,40,'')}...<a href="{$vo.url}">[详细]</a>
+               {/alist}
+            </div>
+            <ul class="b-box5">
+            	{alist name='vo' num='3'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+        <div class="g-box4">
+        	<div class="t-2"><a href="#">湖北</a></div>
+            <ul class="b-box1">
+                {alist name='vo' num='5'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+    </div>
+    <div class="middle-1 fl">
+    	{alist name='vo' num='1'}
+    	<h2><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></h2>
+        <p>{:str_cut($vo['description'],100,'...')}<a href="{$vo.url}">[查看全文]</a></p>
+        {/alist}
+        <ul class="b-box4">
+        	{alist name='vo' num='3'}
+        	<li><a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a></li>
+            {/alist}
+            <div class="cl"></div>
+        </ul>
+        <div class="g-box5">
+        	<div class="t-4 fl">
+            	<span><a href="#">&raquo;更多</a></span>
+            	<h3><a href="#">福建</a></h3>
+            </div>
+        	<div class="pic fl">
+            	{alist name='vo' num='1'}
+                <a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a>
+                {/alist}
+            </div>
+            <ul class="b-box5-1 fl">
+            	{alist name='vo' num='4'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/alist}
+            </ul>
+            <div class="cl"></div>
+        </div>
+        <div class="g-box5">
+        	<div class="t-4 fl">
+            	<span><a href="#">&raquo;更多</a></span>
+            	<h3><a href="#">海南</a></h3>
+            </div>
+        	<div class="pic fl">
+            	{alist name='vo' num='1'}
+                <a href="{$vo.url}"><img src="{$vo.thumb}" />{:str_cut($vo['title'],40,'')}</a>
+                {/alist}
+            </div>
+            <ul class="b-box5-1 fl">
+            	{alist name='vo' num='4'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/alist}
+            </ul>
+            <div class="cl"></div>
+        </div>
+    </div>
+    <div class="right-2 fr">
+    	<div class="g-box6">
+        	<div class="t-2">热门文章</div>
+            <ul class="b-box2">
+            	{rlist name='vo' num='10'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+                {/rlist}
+            </ul>
+        </div>
+        <div class="g-box6">
+        	<div class="t-2"><a href="#">河北</a></div>
+            <ul class="b-box6">
+            	{alist name='vo' num='2'}
+                <li><p><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></p><a href="{$vo.url}"><img src="{$vo.thumb}" /></a></li>
+                {/alist}
+                <div class="cl"></div>
+            </ul>
+            <ul class="b-box7">
+            	{alist name='vo' num='5'}
+                <li><a href="{$vo.url}">{:str_cut($vo['title'],40,'')}</a></li>
+            	{/alist}
+            </ul>
+        </div>
+    </div>
+    <div class="cl"></div>
+</div>
+
+<div class="link">
+	<div class="link-t">
+    	<h4>友情链接</h4>
+    	<span></span>
+    </div>
+    <ul>
+       {flist name='vo' num='20'}
+    	<li><a href="{$vo.url}">{$vo.title}</a></li>
+        {/flist}
+        <div class="cl"></div>
+    </ul>
+</div>
+{include file="footer" /}

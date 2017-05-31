@@ -1,0 +1,48 @@
+{include file="public:header" /}
+<div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:url('Index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="{:url('Position/index')}">推荐位管理</a><span class="crumb-step">&gt;</span><span>添加推荐位</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:url('Position/add')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%" border="1">
+                        <tbody>
+                       
+                           
+                            <tr>
+                                <th>推荐位名称：</th>
+                                <td>
+                                    <input class="common-text" size="50" id="name" name="name"  type="text" >
+                                </td>
+                            </tr>
+                            <tr>
+                            <th width="120">所属栏目：</th>
+                            <td>
+                                <select name="catid">
+                                    <option value="0">选择栏目</option>
+                                    {volist name='cate_list' id='vo'}
+                                    <option value="{$vo.catid}" >{:str_repeat("└─",$vo['level'])}{$vo.catname}</option>
+                                    {/volist}
+                                </select>
+                            </td>
+                           </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary  mr10"  value="保存后自动关闭" name="dosubmit"  type="submit">
+                                    <input class="btn btn-primary  mr10"  value="保存并继续发表" name="dosubmit_continue" type="submit">
+                                    <input class="btn" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

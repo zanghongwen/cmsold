@@ -1,0 +1,49 @@
+{include file="public:header" /}
+<div class="main-wrap">
+
+       
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:url('Index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="{:url('Template/index')}">模板风格</a><span class="crumb-step">&gt;</span><span>{$style_info.name}</span></div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post" action="{:url('Tfile/updatefilename',['style'=>$style])}">
+                
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>目录列表</th>
+                            <th>说明</th>
+                            <th>操作</th>
+                        </tr>
+                        <?php 
+if(is_array($list)){
+	foreach($list as $v){
+	$filename = basename($v);
+?>
+<tr>
+<?php 
+ 	if (substr($filename,-4,4) == 'html') {
+ 		echo '<td align="left">'.$filename.'</td><td align="left"><input type="text" name="file_explan['.$filename.']" value="'.(isset($file_explan[$filename]) ? $file_explan[$filename] : "").'"></td>';
+		if($tpl_edit=='1'){
+			echo '<td align="center"> <a href="'.url('Tfile/edit_file',['style'=>$style,'file'=>$filename]).'">修改</a> <a onClick="confirm_delete()" href="'.url('Tfile/delete_file',['style'=>$style,'file'=>$filename]).'">删除</a></td>';
+		}else{
+			echo '<td></td>';
+		}
+ 	}
+?>
+</tr>
+<?php 
+}
+}
+?>
+                        <tr><td colspan="6"><input class="btn btn-primary btn2" value="更新" type="submit"> <a class="btn btn-primary btn2" href="{:url('Tfile/add_file',['style'=>$style])}">新建</a></td></tr>
+                    </table>
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

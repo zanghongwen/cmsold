@@ -1,0 +1,36 @@
+
+{include file="header" /}
+<div id="templatemo_main">
+    	<div id="templatemo_content">
+        
+        	<h1>{$category.catname}</h1>
+            <p></p>
+                    
+            <div class="cleaner h40"></div>
+                
+            <div id="gallery">
+             {volist name='article_list' id='vo'}
+				<div class="gallery_box">
+					<a href="{$vo.url}" class="pirobox gallery_img image_wrapper" title="Project 1"><img src="{$vo.thumb}" width="240" height="160" /></a>
+                    <div class="right">
+                    	<h5>{$vo.title}</h5>
+                        <p>{$vo.description}</p>
+                        <a href="{$vo.url}" class="more float_r">查看详情</a>
+					</div>
+                    <div class="cleaner"></div>
+				</div>
+               {/volist} 
+              {$page}
+            </div>
+        
+        </div> 
+        
+         {include file="right" /}
+    
+    	<div class="cleaner"></div>
+    </div>
+
+</div> 
+
+
+{include file="footer" /}

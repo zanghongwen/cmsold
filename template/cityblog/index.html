@@ -1,0 +1,61 @@
+
+{include file="header" /}
+
+
+<div id="templatemo_main">
+    	<div id="templatemo_content">
+        
+        	<div id="templatemo_slider">
+                <div id="featuredslideshow">
+                    <ul> 
+                         {plist name='vo' posid='1'  num='5'}
+                        <li><img width="580" height="300"  src="{$vo.thumb}" /></li> 
+                        {/plist}
+                       
+                    </ul> 
+                </div>
+                <script type="text/javascript">
+                     $("div#featuredslideshow").slideViewerPro({ 
+                    thumbs: 4,  
+                    thumbsPercentReduction: 15, 
+                    galBorderWidth: 0, 
+                    galBorderColor: "#666", 
+                    thumbsTopMargin: 10, 
+                    thumbsRightMargin: 10, 
+                    thumbsBorderWidth: 1, 
+                    thumbsActiveBorderColor: "#000", 
+                    thumbsActiveBorderOpacity: 0.8, 
+                    thumbsBorderOpacity: 0, 
+                    buttonsTextColor: "#707070", 
+                    autoslide: true,  
+                    typo: true ,
+					leftButtonInner: "<img src='__PUBLIC__/style2017/cityblog/images/larw.gif' />", 
+			        rightButtonInner: "<img src='__PUBLIC__/style2017/cityblog/images/rarw.gif' />", 
+                    });  	
+                </script>
+            </div>
+            {alist name='vo'   num='10'}
+            <div class="post_box">
+        		<img src="{$vo.thumb}" />
+                <div class="post_box_right">               
+					<h2>{$vo.title}</h2>
+				  <div class="post_meta"><strong>日期:</strong> {$vo.inputtime|date="Y-m-d",###} | <strong>浏览:</strong> {:get_hits($vo['id'])}</div>
+                    <p>{$vo.description}...</p>
+                 <a href="{$vo.url}" class="more">更多详情</a><br />
+                   <div class="category">分类: <a href="{:get_caturl($vo['catid'])}">{:get_catname($vo['catid'])}</a></div>
+    			</div>
+                <div class="cleaner"></div>
+            </div>
+            {/alist}
+           
+        </div> 
+        
+        {include file="right" /}
+    
+    	<div class="cleaner"></div>
+    </div> 
+
+</div>
+
+
+{include file="footer" /}

@@ -1,0 +1,60 @@
+{include file="public:header" /}
+
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:url('Index/index')}">首页</a><span class="crumb-step">&gt;</span><span>编辑会员</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+
+                <form action="{:url('User/edit')}" method="post"  id="form" enctype="multipart/form-data">
+                 <input type="hidden" name="userid" value="{$info.userid}" />
+                  
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                           <tr>
+                                <th>会员名：</th>
+                                <td>{$info.username}</td>
+                            </tr>
+                            
+                        <tr>
+                            <th width="120">会员组：</th>
+                            <td>
+                                 <select name="groupid">
+                                    <option value="0">注册会员</option>
+                                    {volist name='list' id='vo'}
+                                    <option value="{$vo.groupid}" {if condition="$vo['groupid'] eq $info['groupid']"}selected="selected"{/if}>{$vo.name}</option>
+                                    {/volist}
+                                </select>
+                            </td>
+                        </tr>
+                            <tr>
+                                <th>积分：</th>
+                                <td>
+                                    <input class="common-text "  name="point"  value="{$info.point}"  type="text">
+                                </td>
+                            </tr>
+                            
+                           
+                                <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                        </table>
+                   
+                   
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>
