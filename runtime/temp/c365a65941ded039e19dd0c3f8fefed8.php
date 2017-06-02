@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:69:"/Users/mac/Documents/mamp/cms/application/admin/view/index/index.html";i:1491997024;s:71:"/Users/mac/Documents/mamp/cms/application/admin/view/public/header.html";i:1493279924;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:69:"/Users/mac/Documents/mamp/cms/application/admin/view/index/index.html";i:1491997024;s:71:"/Users/mac/Documents/mamp/cms/application/admin/view/public/header.html";i:1496236530;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -54,6 +54,7 @@
                         <li><a href="<?php echo url('Guestbook/index'); ?>"><i class="icon-font">&#xe005;</i>留言管理</a></li>
                         <li><a href="<?php echo url('User/index'); ?>"><i class="icon-font">&#xe005;</i>会员管理</a></li>
                         <li><a href="<?php echo url('Attachment/index'); ?>"><i class="icon-font">&#xe005;</i>附件管理</a></li>
+                        <li><a href="<?php echo url('Employee/index'); ?>"><i class="icon-font">&#xe005;</i>员工管理</a></li>
                     </ul>
                 </li>
                 <li>

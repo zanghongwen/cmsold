@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"/Users/mac/Documents/mamp/cms/application/admin/view/category/index.html";i:1493188148;s:71:"/Users/mac/Documents/mamp/cms/application/admin/view/public/header.html";i:1493279924;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"/Users/mac/Documents/mamp/cms/application/admin/view/category/index.html";i:1493188148;s:71:"/Users/mac/Documents/mamp/cms/application/admin/view/public/header.html";i:1496195251;}*/ ?>
 <!doctype html>
 <html>
 <head>
