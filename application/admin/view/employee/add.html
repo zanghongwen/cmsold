@@ -1,0 +1,98 @@
+{include file="public:header" /}
+<div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:url('Index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="{:url('Employee/index')}">员工管理</a><span class="crumb-step">&gt;</span><span>添加员工</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:url('Employee/add')}" method="post" id="myform" name="myform" >
+                    <table class="insert-tab" width="100%" border="1">
+                        <tbody>
+                            <tr>
+                                <th>姓名：</th>
+                                <td>
+                                    <input class="common-text" id="name" name="name"  type="text" >
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>年龄：</th>
+                                <td>
+                                    <input class="common-text" id="age" name="age"  style=" width:80px;" type="text" >
+                                </td>
+                            </tr>
+                            <tr>
+	                             <th>性别：</th>
+	                             <td>
+	                            		<select name="gender">
+	                            			<option value="">选择性别</option>
+	                                    <option value="m" >男</option>
+	                                    <option value="f" >女</option>
+	                             	</select>
+	                            	</td>
+                            </tr>
+                            <tr>
+                                <th>电话：</th>
+                                <td>
+                                    <input class="common-text" id="phone" name="phone"   type="text" >
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>E-mail：</th>
+                                <td>
+                                    <input class="common-text" id="email" name="email"   type="text" >
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>薪资：</th>
+                                <td>
+                                    <input class="common-text" id="salary" name="salary"   type="text" >
+                                </td>
+                            </tr>
+                           <tr>
+	                             <th>状态：</th>
+	                             <td>
+	                            		<select name="status">
+	                            	        <option value="">选择状态</option>
+	                                    <option value="0">离职</option>
+	                                    <option value="1">在职</option>
+	                                    <option value="2">退休</option>
+	                                    <option value="3" selected>试用期</option>
+	                          		</select>
+	                            	</td>
+                            </tr>
+                            <tr>
+	                             <th>学历：</th>
+	                             <td>
+	                            		<select name="education">
+	                            		   <option value="">选择学历</option>
+	                                    <option value="0" >大专</option>
+	                                    <option value="1">本科</option>
+	                                    <option value="2">硕士</option>
+	                                    <option value="3">博士</option>
+	                          		</select>
+	                            	</td>
+                            </tr>
+                            <tr>
+                                <th>地址：</th>
+                                <td>
+                                    <input class="common-text" id="address" name="address"  style=" width:800px;" type="text" >
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary  mr10"  value="保存后自动关闭" name="dosubmit"  type="submit">
+                                    <input class="btn btn-primary  mr10"  value="保存并继续添加" name="dosubmit_continue" type="submit">
+                                    <input class="btn" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>

@@ -1,0 +1,95 @@
+{include file="public:header" /}
+<div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="{:url('Index/index')}">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="{:url('Employee/index')}">员工管理</a><span class="crumb-step">&gt;</span><span>修改员工信息</span></div>
+        </div>
+        
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:url('Employee/edit')}" method="post" id="myform" name="myform" >
+                <input type="hidden" name="id" value="{$result.id}" />
+                    <table class="insert-tab" width="100%" border="1">
+                        <tbody>
+                            <tr>
+                                <th>姓名：</th>
+                                <td>
+                                    <input class="common-text" id="name" name="name"  type="text" value="{$result.name}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>年龄：</th>
+                                <td>
+                                    <input class="common-text" id="age" name="age"  style=" width:80px;" type="text" value="{$result.age}">
+                                </td>
+                            </tr>
+                            <tr>
+	                             <th>性别：</th>
+	                             <td>
+	                            		<select name="gender">
+	                            			<option value="">选择性别</option>
+	                                    <option value="m" {if condition="$result.gender eq 'm'"}selected="selected"{/if}>男</option>
+	                                    <option value="f" {if condition="$result.gender eq 'f'"}selected="selected"{/if}>女</option>
+	                             	</select>
+	                            	</td>
+                            </tr>
+                            <tr>
+                                <th>电话：</th>
+                                <td>
+                                    <input class="common-text" id="phone" name="phone"   type="text" value="{$result.phone}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>E-mail：</th>
+                                <td>
+                                    <input class="common-text" id="email" name="email"   type="text" value="{$result.email}">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>薪资：</th>
+                                <td>
+                                    <input class="common-text" id="salary" name="salary"   type="text" value="{$result.salary}">
+                                </td>
+                            </tr>
+                           <tr>
+	                             <th>状态：</th>
+	                             <td>
+	                            		<select name="status">
+	                            	        <option value="">选择状态</option>
+	                                    <option value="0" {if condition="$result.status eq '0'"}selected="selected"{/if}>离职</option>
+	                                    <option value="1" {if condition="$result.status eq '1'"}selected="selected"{/if}>在职</option>
+	                                    <option value="2" {if condition="$result.status eq '2'"}selected="selected"{/if}>退休</option>
+	                                    <option value="3" {if condition="$result.status eq '3'"}selected="selected"{/if}>试用期</option>
+	                          		</select>
+	                            	</td>
+                            </tr>
+                            <tr>
+	                             <th>学历：</th>
+	                             <td>
+	                            		<select name="education">
+	                            		   <option value="">选择学历</option>
+	                                    <option value="0" {if condition="$result.education eq '0'"}selected="selected"{/if}>大专</option>
+	                                    <option value="1" {if condition="$result.education eq '1'"}selected="selected"{/if}>本科</option>
+	                                    <option value="2" {if condition="$result.education eq '2'"}selected="selected"{/if}>硕士</option>
+	                                    <option value="3" {if condition="$result.education eq '3'"}selected="selected"{/if}>博士</option>
+	                          		</select>
+	                            	</td>
+                            </tr>
+                            <tr>
+                                <th>地址：</th>
+                                <td>
+                                    <input class="common-text" id="address" name="address"  style=" width:800px;" type="text" value="{$result.address}">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary  mr10"  value="提交" name="dosubmit"  type="submit">
+                                    <input class="btn" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+</div>
